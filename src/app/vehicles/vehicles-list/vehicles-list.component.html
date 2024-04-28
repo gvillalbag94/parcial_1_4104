@@ -28,4 +28,11 @@
     </table>
    
   </div>
+  <div>
+    <tr *ngFor="let mark of vehiclesPerMark">
+      <td>
+        <dd >Total {{mark.get('marca')}}: {{mark.get('cantidad')}}</dd>
+      </td>
+  </tr>
+  </div>
 </div>

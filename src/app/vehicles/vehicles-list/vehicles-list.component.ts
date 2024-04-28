@@ -11,6 +11,8 @@ export class VehiclesListComponent implements OnInit {
 
   vehicles: Array<Vehicle> = [];
 
+  vehiclesPerMark = new Array<Map<string, any>>();
+
   constructor(private vehicleService: VehiclesService) { }
 
   ngOnInit() {
@@ -20,8 +22,23 @@ export class VehiclesListComponent implements OnInit {
   getVehicles() {
     this.vehicleService.getVehicles().subscribe((vehicles) => {
       this.vehicles = vehicles;
-    });
+      this.getVehiclesPerMark();
+    });   
+  }
 
-   
+  getVehiclesPerMark() {
+    this.vehicles.forEach(vehicle => {
+      const marca = vehicle.marca;
+      const existingVehicleMark = this.vehiclesPerMark.find(vehicleMark => vehicleMark.get('marca') === marca);
+  
+      if (existingVehicleMark) {
+        existingVehicleMark.set('cantidad', existingVehicleMark.get('cantidad') + 1);
+      } else {
+        const vehicleDict = new Map<string, any>();
+        vehicleDict.set('marca', marca);
+        vehicleDict.set('cantidad', 1);
+        this.vehiclesPerMark.push(vehicleDict);
+      }
+    });
   }
 }
