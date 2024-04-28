@@ -1,4 +1,4 @@
-export class Actor {
+export class Vehicle {
     id: number;
     marca: string;
     linea: string;
