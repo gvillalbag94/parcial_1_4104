@@ -1,0 +1,12 @@
+  .parent-container {
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+  }
+
+  .title {
+    font-family: 'Jaldi';
+    color: black;
+    font-weight: bolder;
+    font-size: 36px;
+  }

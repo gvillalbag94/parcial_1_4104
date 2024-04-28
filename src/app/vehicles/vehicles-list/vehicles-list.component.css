@@ -4,6 +4,10 @@
     font-family: 'Inter';
   }
 
+  .id-number{
+    font-weight: bolder;
+  }
+
 
   .white-background {
     color: black; 

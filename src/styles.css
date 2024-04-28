@@ -6,3 +6,10 @@
          font-weight: normal;
          font-style: normal;
   }
+
+@font-face {
+    font-family: 'Jaldi';
+    src: url('/assets/fonts/Jaldi-Regular.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+  }
