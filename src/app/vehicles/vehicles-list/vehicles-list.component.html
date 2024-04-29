@@ -2,7 +2,7 @@
   <div class="col-6">
     <table class="table">
       <thead >
-        <tr >
+        <tr id="table-header">
           <th class="custom-background">#</th>
           <th class="custom-background">Marca</th>
           <th class="custom-background">Línea</th>
@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody >
-        <tr *ngFor="let c of vehicles">
+        <tr id = "item_table" *ngFor="let c of vehicles">
           <td>
             <dd class="id-number">{{c.id}}</dd>
           </td>
